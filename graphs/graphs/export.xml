@@ -1,0 +1,49 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <useAdvancedOptions>false</useAdvancedOptions>
+      <file>INPUTIFG</file>
+      <copyMetadata>true</copyMetadata>
+      <bandNames/>
+      <pixelRegion>0,0,21252,12220</pixelRegion>
+      <maskNames/>
+    </parameters>
+  </node>
+  <node id="Convert-Datatype">
+    <operator>Convert-Datatype</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <sourceBands>SRCBAND</sourceBands>
+      <targetDataType>float32</targetDataType>
+      <targetScalingStr>Linear (between 95% clipped histogram)</targetScalingStr>
+      <targetNoDataValue>0.0</targetNoDataValue>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="Convert-Datatype"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>OUTPUTEXPORT</file>
+      <formatName>GeoTIFF-BigTIFF</formatName>
+    </parameters>
+  </node>
+  <applicationData id="Presentation">
+    <Description/>
+    <node id="Read">
+            <displayPosition x="37.0" y="134.0"/>
+    </node>
+    <node id="Convert-Datatype">
+      <displayPosition x="152.0" y="134.0"/>
+    </node>
+    <node id="Write">
+            <displayPosition x="344.0" y="135.0"/>
+    </node>
+  </applicationData>
+</graph>
