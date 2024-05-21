@@ -25,9 +25,10 @@ Here you can:
 6. Perform an area check to reject images with less than 80% of the area size of the selected original scene, preventing interferogram calculations on incomplete images.
 7. Filter Stack Metadata: Filter the stack metadata by calculating the required perpendicular and temporal baseline information. Reject incomplete scenes.
 8. Download Data: After filtering, use the ASF-Search data download functionalities to download the Sentinel-1 data from the ASF servers.
-Then, depending on your choice for applying PSI or SBAS, you can choose one of the following workflow
+# Then, depending on your choice for applying PSI or SBAS, you can choose one of the following workflow
 04_run_psi.ipynb
 05_run_sbas.ipynb
+
 # Citation
 please refer to our publication Zaki, A., Chang, L., Manzella, I., van der Meijde, M., Girgin, S., Tanyas, H. and Fadel, I., 2024. Automated Python workflow for generating Sentinel-1 PSI and SBAS interferometric stacks using SNAP on Geospatial Computing Platform. Environmental Modelling & Software, p.106075.
 
